@@ -38,3 +38,19 @@ To contribute, please read the [contribution guidelines](_about/CONTRIBUTING.md)
 
 Also available are some answers to [Frequently Asked Questions](_about/FAQ.md).
 
+## Privowny changes
+
+This is just a fork of https://github.com/pfault/terraform-provider-kubernetes with the following changes
+* new Privowny branch with goreleaser configuration file (.goreleaser.yml)
+* new `v1.13.3-lazy` tag
+* goroleaser takes care of building the code according to its configuration and publishes the builds to Privowny's repo
+### Publishing a new release
+
+* Make sure you have access to Privowny's github organization (Hashicorp registry uses the GH organization to get registry's organization information)
+* get a personal access token with the "public repo" access and set `GITHUB_TOKEN` accordingly
+* set `GPG_FINGEPRINT` to the GPG key you're going to use to sign the builds (the *private* key for that fingerprint must exists in your gpg keyring and you *must* have a way to cache its password for goreleaser to work )
+* run `goreleaser release --rm-dist --skip-validate`
+
+[Reference documentation](https://www.terraform.io/docs/registry/providers/publishing.html) from Hashicorp
+
+Hashicorp registry Privowny Organization
