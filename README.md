@@ -53,4 +53,4 @@ This is just a fork of https://github.com/pfault/terraform-provider-kubernetes w
 
 [Reference documentation](https://www.terraform.io/docs/registry/providers/publishing.html) from Hashicorp
 
-Hashicorp registry Privowny Organization
+Hashicorp registry [Privowny Organization](https://registry.terraform.io/publish/provider/github/Privowny)
